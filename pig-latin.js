@@ -10,4 +10,9 @@ const translatePL = function(text) {
     return textPL.join(" ");
 };
 
-console.log(translatePL("pig latin"))
+let commandLine = "";
+process.argv.slice(2).forEach(text => {
+    commandLine += translatePL(text) + " ";
+});
+
+console.log(commandLine)
